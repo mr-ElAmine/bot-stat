@@ -36,8 +36,9 @@ class BrokerManager:
             account = credentials["account"]
             password = credentials["password"]
             server = credentials["server"]
+            mt4_path = credentials["mt4_path"]
 
-        if not mt5.initialize():
+        if not mt5.initialize(mt4_path):
             raise ConnectionError("MT4 initialization failed")
 
         authorized = mt5.login(int(account), password=password, server=server)
