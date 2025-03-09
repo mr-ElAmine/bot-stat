@@ -37,7 +37,7 @@ class Settings:
         Get the MetaTrader 4 (MT4) account credentials.
 
         Returns:
-            dict: A dictionary containing 'account', 'server', and 'password' and mt4_path.
+            dict: A dictionary containing 'account', 'server', and 'password'.
 
         Raises:
             ValueError: If any of the required MT4 environment variables are not set.
@@ -45,14 +45,12 @@ class Settings:
         account = os.getenv("ACCOUNT_MT4")
         server = os.getenv("SERVER_MT4")
         password = os.getenv("PASSWORD_MT4")
-        mt4_path = os.getenv("MT4_PATHs")
 
-        if not account or not server or not password or not mt4_path:
+        if not account or not server or not password:
             raise ValueError("One or more MT4 credentials are not set")
 
         return {
             "account": account,
             "server": server,
             "password": password,
-            "mt4_path": mt4_path
         }
