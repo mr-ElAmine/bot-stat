@@ -201,17 +201,7 @@ class NewsAndCalendarManager:
         )
         articles = self.get_articles_from_page(3)
 
-        system_message = (
-            "You are a trader. You must take positions by buying or selling based on the latest news and economic events. "
-            "Context: Focus on significant economic events and major headlines. Consider market sentiment, volatility, "
-            "and upcoming announcements when making trading decisions.\n\n"
-            "Nurture: Continuously enrich your analysis by incorporating fresh insights and detailed reasoning when evaluating market conditions."
-            "Your responses should be limited to 'BUY' or 'SELL'."
-        )
-
-        messages: List[ChatMessageModel] = [
-            {"role": "system", "content": system_message}
-        ]
+        messages: List[ChatMessageModel] = []
 
         if economic_calendar:
             messages.append(

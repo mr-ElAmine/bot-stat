@@ -39,5 +39,5 @@ pip freeze > requirements.txt
 ### Formatage du code
 
 ```bash
-black src/ && isort src/ && blackdoc --check src/ && pylint src/ && darglint src/
+black src/ && isort src/ && blackdoc src/ && pylint src/ && darglint src/
 ```
