@@ -18,6 +18,10 @@ python3 -m venv .venv
 source .venv/bin/activate
 ```
 
+```bash
+.venv\Scripts\activate.bat
+```
+
 ### Pour arrêter (ou désactiver) l'environnement virtuel, il te suffit de taper la commande suivante dans ton terminal
 
 ```bash
